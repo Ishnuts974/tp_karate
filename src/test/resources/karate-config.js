@@ -1,10 +1,15 @@
 function fn(){
 
-    var config = {
-        urlServeur: 'https://regres.in/apt/uers?page=1'
-        var2: 'valeur2'
+    var config = { //base config JSON
+        urlServeur: 'https://jsonplaceholder.typicode.com',
+        var2: 'valeur2',
         var3: 'valeur3'
-        }
+        };
 
-        //config.
+        karate.configure('connectTimeout',5000);
+        karate.configure('readTimeout',5000);
+        karate.configure('ssl', { trustAll: true });
+
+        return config;
+
 }
