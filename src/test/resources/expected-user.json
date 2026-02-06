@@ -1,5 +1,23 @@
 {
-    "userId": 3,
-    "title": "fichier JSON pour tester méthode GET",
-    "body": "Ceci est la valeur de mon body pour l'exercice 5 sur l'utilisation d'un fichier JSON pour valider une réponse GET"
+  "id": "#number",
+  "name": "#string",
+  "username": "#string",
+  "email": "#string",
+  "address": {
+    "street": "#string",
+    "suite": "#string",
+    "city": "#string",
+    "zipcode": "#string",
+    "geo": {
+      "lat": "#string",
+      "lng": "#string"
+    }
+  },
+  "phone": "#string",
+  "website": "#string",
+  "company": {
+    "name": "#string",
+    "catchPhrase": "#string",
+    "bs": "#string"
   }
+}

@@ -75,6 +75,29 @@ Feature: Test API
     And match response.body == requestBody.body
 
 
-    @exo4
+    @exo4 @exoJson
     Scenario: POST a partir de chargement de données JSON
       Given url urlServeur
+
+      #Charger le fichier JSON
+      And def newPostJson = read('new-post.json')
+
+      #Envoie la requete
+      And request newPostJson
+      And path posts
+      #Vérifie les résultats
+      When method POST
+      Then status 201
+      And match response.userId == newPostJson.userId
+      And match response.title == newPostJson.title
+      And match response.body == newPostJson.body
+
+      @exo5 @exoJson
+      Scenario: utiliser un fichier JSON pour valider une réponse GET
+        Given url urlServeur
+        And path user1
+        And def userJson = read('expected-user.json')
+        When method GET
+        Then status 200
+        And match response == userJson
+
