@@ -2,8 +2,8 @@ function fn(){
 
     var config = { //base config JSON
         urlServeur: 'https://jsonplaceholder.typicode.com',
-        var2: 'valeur2',
-        var3: 'valeur3'
+        users: 'users',
+        posts: 'posts/1'
         };
 
         karate.configure('connectTimeout',5000);

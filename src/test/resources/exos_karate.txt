@@ -13,7 +13,7 @@ Feature: Test API
     #l'odre des attributs du json n'importe pas
   Scenario: test GET exo1
     Given url urlServeur
-    And path posts
+    And path "/posts/1"
     When method GET
     Then status 200
     And match response ==
@@ -30,7 +30,7 @@ Feature: Test API
     #declaration de variable en karate avec def nomDeVariable
   Scenario: test réutilisation de réponse
     Given url urlServeur
-    And path users
+    And path "/users"
     When method GET
     Then status 200
 
@@ -73,8 +73,3 @@ Feature: Test API
     And match response.userId == requestBody.userId
     And match response.title == requestBody.title
     And match response.body == requestBody.body
-
-
-    @exo4
-    Scenario: POST a partir de chargement de données JSON
-      Given url urlServeur
