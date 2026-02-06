@@ -1,0 +1,5 @@
+{
+    "userId": 3,
+    "title": "fichier JSON pour tester méthode GET",
+    "body": "Ceci est la valeur de mon body pour l'exercice 5 sur l'utilisation d'un fichier JSON pour valider une réponse GET"
+  }
